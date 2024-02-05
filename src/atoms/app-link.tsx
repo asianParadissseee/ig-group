@@ -1,15 +1,14 @@
 import { FC, ReactNode } from 'react';
 import { Link, LinkProps } from 'react-router-dom';
 
-
 export enum AppLinkSize {
   S = 'text-10px',
-  M = 'text-4xl'
+  M = 'text-4xl',
 }
 
 export enum AppLinkColor {
   DARK = 'text-black',
-  LIGHT = 'text-white'
+  LIGHT = 'text-white',
 }
 
 interface AppLinkProps extends LinkProps {

@@ -12,11 +12,9 @@ const BaseLayout: FC<BaseLayoutProps> = (props) => {
   return (
     <Fragment>
       <Navbar />
-      <div className="flex">
+      <div className='flex'>
         <Sidebar />
-        <div className="container mx-auto p-10">
-          {children}
-        </div>
+        <div className='container mx-auto p-10'>{children}</div>
       </div>
       <Footer />
     </Fragment>
