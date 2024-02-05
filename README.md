@@ -7,7 +7,7 @@ npm run dev
 # Команда сборки
 
 ```
-npm run dev
+npm run build
 ```
 
 # Команда форматирования 
