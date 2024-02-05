@@ -1,9 +1,8 @@
 import { FC, memo, ReactNode } from 'react';
 
-
 export enum AppTitleColor {
   DARK = 'text-black',
-  LIGHT = 'text-white'
+  LIGHT = 'text-white',
 }
 
 export enum AppTitleSize {
@@ -11,7 +10,7 @@ export enum AppTitleSize {
   M = 'text-2xl',
   L = 'text-3xl',
   XL = 'text-5xl',
-  XXL = 'text-6xl'
+  XXL = 'text-6xl',
 }
 
 export enum AppTitleWeight {
@@ -31,11 +30,7 @@ const AppTitle: FC<AppTitleProps> = memo((props) => {
   const { tag, children, weight, size, color } = props;
   const Tag = tag;
 
-  return (
-    <Tag className={`${weight} ${color} ${size}`}>
-      {children}
-    </Tag>
-  );
+  return <Tag className={`${weight} ${color} ${size}`}>{children}</Tag>;
 });
 
 export default AppTitle;

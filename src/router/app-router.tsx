@@ -6,8 +6,7 @@ const AppRouter = () => {
   return (
     <Routes>
       {Object.values(routeConfig).map((route) => {
-        return <Route key={route.path} path={route.path}
-                      element={<Suspense fallback={'loader...'}>{route.element}</Suspense>} />;
+        return <Route key={route.path} path={route.path} element={<Suspense fallback={'loader...'}>{route.element}</Suspense>} />;
       })}
     </Routes>
   );
