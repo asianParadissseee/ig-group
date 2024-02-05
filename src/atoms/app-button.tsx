@@ -12,22 +12,22 @@ export enum AppButtonAlign {
 }
 
 export enum AppButtonSize {
-  L = 'w-44 h-16',
-  XL = 'w-6/12 h-10',
+  L = 'w-44 h-10',
+  XL = 'w-6/12 h-16',
 }
 
 interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  size?: AppButtonSize;
-  align?: AppButtonAlign;
-  backgroundColor?: AppButtonSizeBackgroundColor;
+  size: AppButtonSize;
+  align: AppButtonAlign;
+  backgroundColor: AppButtonSizeBackgroundColor;
   children: ReactNode;
-  border?: boolean;
+  radius: boolean;
 }
 
 const AppButton: FC<AppButtonProps> = memo((props) => {
-  const { children, size, align, backgroundColor, border, ...otherProps } = props;
+  const { children, size, align, backgroundColor, radius, ...otherProps } = props;
   return (
-    <button className={`${size} ${align} ${backgroundColor} ${border ? 'rounded-md' : ''} text-white font-semibold`} {...otherProps}>
+    <button className={`${size} ${align} ${backgroundColor} ${radius ? 'rounded-md' : ''} text-white font-semibold`} {...otherProps}>
       {children}
     </button>
   );
