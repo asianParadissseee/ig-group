@@ -12,8 +12,8 @@ export enum AppButtonAlign {
 }
 
 export enum AppButtonSize {
-  L = 'w-44 h-16',
-  XL = 'w-6/12 h-10',
+  L = 'w-44 h-10',
+  XL = 'w-6/12 h-16',
 }
 
 interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
