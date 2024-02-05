@@ -14,7 +14,9 @@ const BaseLayout: FC<BaseLayoutProps> = (props) => {
       <Navbar />
       <div className="flex">
         <Sidebar />
-        {children}
+        <div className="container mx-auto p-10">
+          {children}
+        </div>
       </div>
       <Footer />
     </Fragment>
