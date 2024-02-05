@@ -4,11 +4,9 @@ import { Fragment } from 'react';
 import AppText, { AppTextColor, AppTextSize, AppTextWeight } from '../atoms/app-text.tsx';
 
 const Navbar = () => {
-
-
   interface ISubMenu {
-    path?: string,
-    link: string
+    path?: string;
+    link: string;
   }
 
   interface NavItems {
@@ -23,38 +21,46 @@ const Navbar = () => {
         {
           link: 'ИИ решение',
           path: '/',
-        }, {
+        },
+        {
           link: 'ИИ решение',
           path: '/',
-        }, {
+        },
+        {
           link: 'ИИ решение',
           path: '/',
         },
       ],
-    }, {
+    },
+    {
       title: 'Портфолио',
       subMenu: [
         {
           link: 'ИИ решение',
           path: '/',
-        }, {
+        },
+        {
           link: 'ИИ решение',
           path: '/',
-        }, {
+        },
+        {
           link: 'ИИ решение',
           path: '/',
         },
       ],
-    }, {
+    },
+    {
       title: 'Контакты',
       subMenu: [
         {
           link: 'ИИ решение',
           path: '/',
-        }, {
+        },
+        {
           link: 'ИИ решение',
           path: '/',
-        }, {
+        },
+        {
           link: 'ИИ решение',
           path: '/',
         },
@@ -62,36 +68,25 @@ const Navbar = () => {
     },
   ];
 
-
   return (
-    <header className="flex justify-between items-center bg-gray-950 max-w-full px-10 h-20">
+    <header className='flex justify-between items-center bg-gray-950 max-w-full px-10 h-20'>
       <AppLogo />
       <nav>
-        <ul className="flex gap-10">
-          {
-            navItems.map((item, id) => (
-              <Fragment key={id}>
-                <AppText
-                  color={AppTextColor.LIGHT}
-                  size={AppTextSize.L}
-                  weight={AppTextWeight.L}
-                >
-                  {item.title} {'>'}
-                </AppText>
-              </Fragment>
-            ))
-          }
+        <ul className='flex gap-10'>
+          {navItems.map((item, id) => (
+            <Fragment key={id}>
+              <AppText color={AppTextColor.LIGHT} size={AppTextSize.L} weight={AppTextWeight.L}>
+                {item.title} {'>'}
+              </AppText>
+            </Fragment>
+          ))}
         </ul>
-
       </nav>
-      <AppButton radius
-                 size={AppButtonSize.L}
-                 align={AppButtonAlign.CENTER}
-                 backgroundColor={AppButtonSizeBackgroundColor.GRADIENT}
-      >
+      <AppButton radius size={AppButtonSize.L} align={AppButtonAlign.CENTER} backgroundColor={AppButtonSizeBackgroundColor.GRADIENT}>
         Рассчет проекта
       </AppButton>
-    </header>);
+    </header>
+  );
 };
 
 export default Navbar;
