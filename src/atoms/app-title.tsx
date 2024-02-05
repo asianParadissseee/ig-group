@@ -1,10 +1,5 @@
-
 const AppTitle = () => {
-  return (
-    <div>
-
-    </div>
-  );
+  return <div></div>;
 };
 
 export default AppTitle;

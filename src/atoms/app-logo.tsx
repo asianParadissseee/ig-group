@@ -1,10 +1,5 @@
-
 const AppLogo = () => {
-  return (
-    <div>
-
-    </div>
-  );
+  return <div></div>;
 };
 
 export default AppLogo;
