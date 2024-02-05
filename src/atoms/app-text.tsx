@@ -1,15 +1,14 @@
 import { FC, memo, ReactNode } from 'react';
 
-
 export enum AppTextColor {
   LIGHT = 'text-white',
   DARK = 'text-black',
-  GRAY = 'text-gray-800'
+  GRAY = 'text-gray-800',
 }
 
 export enum AppTextWeight {
   M = 'font-normal',
-  L = 'font-semibold'
+  L = 'font-semibold',
 }
 
 export enum AppTextSize {
@@ -25,16 +24,10 @@ interface AppTextProps {
   color?: AppTextColor;
 }
 
-
 const AppText: FC<AppTextProps> = memo((props) => {
-
   const { children, size, weight, color } = props;
 
-  return (
-    <p className={`${size} ${weight} ${color}`}>
-      {children}
-    </p>
-  );
+  return <p className={`${size} ${weight} ${color}`}>{children}</p>;
 });
 
 export default AppText;
