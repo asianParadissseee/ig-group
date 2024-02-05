@@ -2,7 +2,7 @@ import { RouteProps } from 'react-router-dom';
 import HomePage from '../../pages/home-page.tsx';
 
 export enum AppRoutes {
-  HOME = 'home'
+  HOME = 'home',
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
